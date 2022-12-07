@@ -1,0 +1,57 @@
+input[type="text"] {
+  width: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+  box-shadow: 1px 5px #888888;
+  font-size: 20px;
+  background-color: #e45370;
+}
+input[type="text"]:focus{
+  background-color: white;
+}
+.inputDiv {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  background-color: #2a2a2a;
+}
+.UserCard{
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  column-gap: 9%;
+  margin-left: 14%;
+  margin-right: 15%;
+  border-radius: 20px;
+  background-color: #e45370;
+  margin-top: 2%;
+}
+.UserImg{
+  border-radius: 50%;
+  width: 80%;
+  height: 86%;
+  /* margin-top: 4%; */
+}
+.UserImgdiv{
+  /* margin: 2% 0% 2% 0%; */
+  margin-top: 4%;
+
+}
+.UserdetailDiv{
+  margin-top: 5%;
+}
