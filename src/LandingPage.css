@@ -18,7 +18,7 @@ input[type="text"]:focus{
   margin-right: 10%;
   margin-left: 10%;
 }
-button {
+.LandingPageButton{
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;

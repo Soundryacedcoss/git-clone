@@ -1,0 +1,22 @@
+.Navbar{
+    display: flex;
+    column-gap: 1%;
+    background-color: #24292f;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.LinksDiv{
+    width: 90%;
+}
+li{
+    display: inline-block;
+    gap: 6%;
+    margin-left: 5%;
+    color: white;
+    margin-top: 2%;
+}
+.GitLogo{
+    width: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+}
