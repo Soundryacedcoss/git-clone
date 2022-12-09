@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import logo from './image/git.png'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'

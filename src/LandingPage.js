@@ -5,13 +5,15 @@ import { profileData } from "./Slice/dataslice1";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 export const LandingPage = () => {
-  useEffect(()=>{
-    document.getElementById("search").focus();
-  },[])
   const dispatch = useDispatch();
   const output = useSelector((state) => state.product.data);
   // Using useState top take vakue from input box
   const [input, setInput] = useState("");
+  const [display, setDisplay] = useState();
+  useEffect(() => {
+    setDisplay("none");
+    document.getElementById("search").focus();
+  }, []);
   // Taking input from user
   const SearchbarHandler = (e) => {
     setInput(e.target.value);
@@ -22,15 +24,16 @@ export const LandingPage = () => {
       document.getElementById("search").focus();
       alert("Please Write UserName");
     } else {
+      setDisplay("block");
       dispatch(fetchdata(input));
     }
   };
-    // search via keyboard
-    const keyHandler=(e)=>{
-      if(e.key==="Enter"){
-        SearchClickHandler()
-      }
+  // search via keyboard
+  const keyHandler = (e) => {
+    if (e.key === "Enter") {
+      SearchClickHandler();
     }
+  };
   // Profile button function
   const ProfileClickHandler = () => {
     dispatch(profileData(input));
@@ -39,12 +42,19 @@ export const LandingPage = () => {
     <div>
       <h2>Git clone</h2>
       <div className="inputDiv">
-        <input onKeyDown={keyHandler} className="SearchBar" id="search" type="text" onChange={SearchbarHandler} />
+        <input
+          onKeyDown={keyHandler}
+          className="SearchBar"
+          id="search"
+          type="text"
+          onChange={SearchbarHandler}
+        />
       </div>
       <button className="LandingPageButton" onClick={SearchClickHandler}>
         search
       </button>
-      <div className="UserCard">
+      <div style={{ display }}>
+      <div className="UserCard" >
         <div className="UserImgdiv">
           <img className="UserImg" src={output.avatar_url} alt="" />
         </div>
@@ -59,6 +69,7 @@ export const LandingPage = () => {
             </button>
           </Link>
         </div>
+      </div>
       </div>
     </div>
   );
